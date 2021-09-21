@@ -23,15 +23,15 @@ greet("Shahad")
  * isOdd(10) -> false
  */
 function isOdd(n) {
-  if (n % 2 == 0) {
-  return false;
+  if (n % 2 !== 0) {
+  return true;
   }
   else {
-  return true;
+  return false;
 }
 }
 
-isOdd(8)
+console.log("8",isOdd(8))
 
 
 /**
@@ -51,7 +51,7 @@ function oddsSmallerThan(n) {
   return (n-1)/2
 }
 
-oddsSmallerThan(33)
+console.log("33",oddsSmallerThan(33))
 
 /**
  * squareOrDouble(n):
@@ -64,11 +64,11 @@ oddsSmallerThan(33)
  * squareOrDouble(9) -> 81
  */
 function squareOrDouble(n) {
-  if (n % 2 == 0){
-  return n*2
+  if (isOdd(n)){
+  return n*n
   }
   else {
-    return n*n
+    return n*2
   }
 }
 
